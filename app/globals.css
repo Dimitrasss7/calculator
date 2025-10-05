@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply h-full;
+  }
+  body {
+    @apply h-full bg-gray-100 dark:bg-gray-900 transition-colors duration-300;
+  }
+}
+
+@layer utilities {
+  .calc-button {
+    @apply h-16 rounded-lg font-semibold text-xl transition-all duration-150 active:scale-95 hover:shadow-lg;
+  }
+  .calc-button-number {
+    @apply calc-button bg-white dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-600;
+  }
+  .calc-button-operator {
+    @apply calc-button bg-orange-500 text-white hover:bg-orange-600;
+  }
+  .calc-button-clear {
+    @apply calc-button bg-gray-400 text-white hover:bg-gray-500;
+  }
+}
